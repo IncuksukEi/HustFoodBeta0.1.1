@@ -398,27 +398,60 @@
           </div>
         </div>
         <div class="product-details">
-          <h2>CHI TIẾT SẢN PHẨM</h2>
-          <ul>
-            <li><strong>Danh Mục:</strong> Bánh mì</li>
-            <li><strong>Số lượng hàng khuyến mãi:</strong> 59</li>
-            <li><strong>Số sản phẩm còn lại:</strong> 7606</li>
-            <li>
-              <strong>Thương hiệu:</strong> <span class="brand">Richy</span>
-            </li>
-            <li><strong>Xuất xứ:</strong> Việt Nam</li>
-            <li><strong>Hương vị:</strong> Phô mai, chà bông</li>
-            <li><strong>Kiểu đóng gói:</strong> Bộ đôi</li>
-            <li><strong>Loại thực phẩm:</strong> Truyền thống</li>
-            <li><strong>Giảm cân đặc biệt:</strong> Ít béo</li>
-            <li><strong>Loại bánh mì:</strong> Bánh tươi</li>
-            <li><strong>Hạn sử dụng:</strong> 45 ngày</li>
-            <li><strong>Số lượng:</strong> 4 bịch</li>
-            <li>
-              <strong>Tên tổ chức chịu trách nhiệm sản xuất:</strong> Richy
-            </li>
-            <li><strong>Gửi từ:</strong> TP. Hồ Chí Minh</li>
-          </ul>
+          <h2>Mô tả sản phẩm</h2>
+          <div class="product_description" id="productDescription">
+            <p>
+              Combo 4 bịch Bánh tươi Karo: 1 Karo chà bông sợi gà truyền thống +
+              1 Karo phô mai + 2 Karo Gấu nhân phô mai Sở hữu hương vị đặc biệt
+              hòa quyện hoàn hảo giữa trứng tươi và chà bông, bánh trứng chà
+              bông Karo đem đến vị đậm đà, ngon miệng cùng hương vị phô mai.
+              Thông tin sản phẩm: - Hạn sử dụng: 45 ngày từ ngày sản xuất. - Sử
+              dụng: Bóc bánh, ăn liền, tránh để lâu ngoài không khí, sẽ làm ảnh
+              hưởng tới chất lượng của bánh. Ưu điểm nổi bật: – Đúng như tên gọi
+              của mình, bánh trứng chà bông Karo sở hữu vẻ ngoài xốp phồng, mặt
+              bánh có những đường kẻ ngang dọc caro thật ấn tượng và lạ mắt. Màu
+              bánh vàng đậm nhờ có sự kết hợp của ruốc và trứng trông rất hấp
+              dẫn. – Bánh tươi Karo được làm từ nguồn nguyên liệu 100% trứng
+              tươi và sợi thịt gà. Với công nghệ tiên phong cho ra đời chiếc
+              bánh đậm đà – thơm hương trứng, đậm vị chà bông thật hấp dẫn. Bánh
+              mềm xốp, phồng mịn, ruốc đan xen đều khắp bánh. – Bánh tươi Karo
+              mang đến nhiều dinh dưỡng, được xem như bữa ăn nhẹ cung cấp năng
+              lượng và các chất cần thiết cho cơ thể như: protein, canxi, chất
+              xơ và các dưỡng chất khác… – Được đóng gói nhỏ gọn trong bao bì,
+              tiện lợi, bánh trứng chà bông Karo phù hợp để mang theo khi đi xa,
+              du lịch, đi chơi, dã ngoại… Bao bì giấy đẹp mắt, ấn tượng, thân
+              thiện với môi trường. – Bánh tươi Karo được sản xuất trên dây
+              chuyền sản xuất hiện đại, quy trình quản lý chất lượng tiêu chuẩn
+              quốc tế, cùng với nguồn nguyên liệu sạch – tươi, an toàn, đảm bảo
+              và an toàn cho sức khỏe người sử dụng. Hướng dẫn bảo quản: – Bảo
+              quản nơi khô ráo, thoáng mát, tránh ánh nắng mặt trời. – Ngày sản
+              xuất/ Hạn sử dụng: In trên bao bì sản phẩm: 45 ngày kể từ ngày sản
+              xuất – Bánh tươi Karo hiện đang được sản xuất và phân phối bởi
+              Richy. #banhkaro #banhkarotrungtuoichabong #banhkarosoiga
+              #banhkarochabong #banhkarotrungtuoichabongrichy #banhkarothung
+              #karo #karotrungtuoichabong #karophomai #karophomaihoangkim
+              #banhkarophomai #banhkarotrungtuoichabongphomai
+              #banhkarophomaihoangkim #banhrichy
+            </p>
+          </div>
+          <button class="toggle_button" onclick="toggleDescription()">
+            Xem thêm
+          </button>
+        </div>
+        <div class="product-details">
+          <h2>Bình luận</h2>
+          <div class="comment_section">
+            <div class="comment_input_container">
+              <input
+                type="text"
+                class="comment_input"
+                id="commentInput"
+                placeholder="Viết bình luận..."
+              />
+              <button class="comment_button" onclick="addComment()">Gửi</button>
+            </div>
+            <div class="comment_list" id="commentList"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -517,5 +550,37 @@
         </div>
       </div>
     </footer>
+    <!-- JS -->
+    <script>
+      function toggleDescription() {
+        const desc = document.getElementById("productDescription");
+        const button = document.querySelector(".toggle_button");
+        if (desc.classList.contains("expanded")) {
+          desc.classList.remove("expanded");
+          button.textContent = "Xem thêm";
+        } else {
+          desc.classList.add("expanded");
+          button.textContent = "Thu gọn";
+        }
+      }
+    </script>
+    <script>
+      function addComment() {
+        const input = document.getElementById("commentInput");
+        if (input.value.trim() !== "") {
+          const commentList = document.getElementById("commentList");
+          const newComment = document.createElement("div");
+          newComment.classList.add("comment_item");
+          newComment.innerHTML = `
+                  <img src="assets1/img/Customer1.png" alt="User Avatar" class="user_avatar">
+                  <div>
+                      <strong>Người dùng:</strong> ${input.value}
+                  </div>
+              `;
+          commentList.prepend(newComment);
+          input.value = "";
+        }
+      }
+    </script>
   </body>
 </html>

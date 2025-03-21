@@ -899,23 +899,89 @@
   border-bottom: 2px solid #f0f0f0;
   padding-bottom: 5px;
 }
-
-.product-details ul {
-  list-style: none;
+.product_description {
+  width: 100%;
+  max-width: 800px;
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  position: relative;
 }
-
-.product-details li {
-  font-size: 14px;
-  padding: 5px 0;
+.product_description p {
+  line-height: 1.6rem;
+  text-decoration: 600;
+  font-size: 12px;
+}
+.product_description::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+}
+.product_description.expanded {
+  max-height: none;
+}
+.product_description.expanded::after {
+  display: none;
+}
+.toggle_button {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  color: var(--text-color);
+  text-decoration: underline;
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+/* Comment */
+.comment_section {
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+.comment_input_container {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
-
-.product-details li strong {
-  color: #333;
+.comment_input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
 }
-
+.comment_button {
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.comment_list {
+  max-height: 200px;
+  overflow: auto;
+  transition: max-height 0.3s ease-in-out;
+  position: relative;
+}
+.comment_item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user_avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+/*  */
 .brand {
   color: #007bff;
   cursor: pointer;

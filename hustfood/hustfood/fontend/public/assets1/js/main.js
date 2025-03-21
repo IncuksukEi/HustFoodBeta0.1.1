@@ -20,66 +20,60 @@ toggle.onclick = function () {
   main.classList.toggle("active");
 };
 // Product
-document.addEventListener("DOMContentLoaded", function () {
+document
+  .getElementById("productForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    addProduct();
+  });
+
+function addProduct() {
+  const name = document.getElementById("productName").value;
+  const price = document.getElementById("productPrice").value;
+  const type = document.getElementById("productType").value;
+  const quantity = document.getElementById("productQuantity").value;
+  const description = document.getElementById("productDescription").value;
+
+  if (!name || !price || !type || !quantity || !description) {
+    alert("Vui lòng nhập đầy đủ thông tin sản phẩm.");
+    return;
+  }
+
   const productList = document.getElementById("products_list");
+  const productItem = document.createElement("div");
+  productItem.classList.add("products_item");
+  productItem.innerHTML = `
+                <strong>${name}</strong>
+                <p>Giá: ${parseInt(price).toLocaleString("vi-VN")} VND</p>
+                <p>Loại: ${type}</p>
+                <p>Số lượng: ${quantity}</p>
+                <p>Mô tả: ${description}</p>
+                <button class="products_status products_pending" onclick="updateStatus(this)">Đang giao</button>
+                <button onclick="deleteProduct(this)">Xóa</button>
+            `;
+  productList.appendChild(productItem);
+  document.getElementById("productForm").reset();
+}
 
-  window.addProduct = function () {
-    const name = document.getElementById("productName").value;
-    const originalPrice = document.getElementById("productOriginalPrice").value;
-    const discountedPrice = document.getElementById(
-      "productDiscountedPrice"
-    ).value;
-    const discount = document.getElementById("productDiscount").value;
-    const receiveFrom = document.getElementById("productReceiveFrom").value;
-    const receiveTo = document.getElementById("productReceiveTo").value;
-    const description = document.getElementById("productDescription").value;
+function deleteProduct(button) {
+  button.parentElement.remove();
+}
 
-    if (!name || !originalPrice || !discountedPrice) {
-      alert("Vui lòng nhập đầy đủ thông tin sản phẩm.");
-      return;
-    }
-
-    const productItem = document.createElement("div");
-    productItem.classList.add("products_item");
-
-    productItem.innerHTML = `
-          <strong>${name}</strong>
-          <p>Giá gốc: <del>${parseInt(originalPrice).toLocaleString(
-            "vi-VN"
-          )} VND</del></p>
-          <p>Giá khuyến mãi: <strong>${parseInt(discountedPrice).toLocaleString(
-            "vi-VN"
-          )} VND</strong></p>
-          <p>Khuyến mãi: ${discount}%</p>
-          <p>Nhận hàng từ: ${receiveFrom} - ${receiveTo}</p>
-          <p>Mô tả: ${description}</p>
-          <button class="products_status products_pending" onclick="updateStatus(this)">Đang giao</button>
-          <button onclick="deleteProduct(this)">Xóa</button>
-      `;
-
-    productList.appendChild(productItem);
-  };
-
-  window.deleteProduct = function (button) {
-    button.parentElement.remove();
-  };
-
-  window.updateStatus = function (button) {
-    if (button.classList.contains("products_pending")) {
-      button.classList.remove("products_pending");
-      button.classList.add("products_delivered");
-      button.textContent = "Đã giao";
-    } else if (button.classList.contains("products_delivered")) {
-      button.classList.remove("products_delivered");
-      button.classList.add("products_returned");
-      button.textContent = "Trả về";
-    } else {
-      button.classList.remove("products_returned");
-      button.classList.add("products_pending");
-      button.textContent = "Đang giao";
-    }
-  };
-});
+function updateStatus(button) {
+  if (button.classList.contains("products_pending")) {
+    button.classList.remove("products_pending");
+    button.classList.add("products_delivered");
+    button.textContent = "Chờ xác nhận";
+  } else if (button.classList.contains("products_delivered")) {
+    button.classList.remove("products_delivered");
+    button.classList.add("products_returned");
+    button.textContent = "Từ chối";
+  } else {
+    button.classList.remove("products_returned");
+    button.classList.add("products_pending");
+    button.textContent = "Chấp nhận";
+  }
+}
 // ===== Customer =====
 document.addEventListener("DOMContentLoaded", function () {
   let customerEditingId = null;

@@ -329,129 +329,45 @@
           </div>
         </div>
         <div class="products_container" id="products">
-          <h2>Quản lý sản phẩm</h2>
-          <p>
-            Hệ thống quản lý sản phẩm giúp bạn dễ dàng thêm, xóa và cập nhật
-            trạng thái giao hàng.
-          </p>
-
-          <input
-            type="text"
-            id="productCategory"
-            class="products_input"
-            placeholder="Danh Mục"
-          />
-          <input
-            type="number"
-            id="productPromoStock"
-            class="products_input"
-            placeholder="Số lượng hàng khuyến mãi"
-          />
-          <input
-            type="number"
-            id="productStock"
-            class="products_input"
-            placeholder="Số sản phẩm còn lại"
-          />
-          <input
-            type="text"
-            id="productBrand"
-            class="products_input"
-            placeholder="Thương hiệu"
-          />
-          <input
-            type="text"
-            id="productOrigin"
-            class="products_input"
-            placeholder="Xuất xứ"
-          />
-          <input
-            type="text"
-            id="productFlavor"
-            class="products_input"
-            placeholder="Hương vị"
-          />
-          <input
-            type="text"
-            id="productPackaging"
-            class="products_input"
-            placeholder="Kiểu đóng gói"
-          />
-          <input
-            type="text"
-            id="productType"
-            class="products_input"
-            placeholder="Loại thực phẩm"
-          />
-
-          <input
-            type="number"
-            id="productExpiryDays"
-            class="products_input"
-            placeholder="Hạn sử dụng (ngày)"
-          />
-          <input
-            type="number"
-            id="productQuantity"
-            class="products_input"
-            placeholder="Số lượng"
-          />
-          <input
-            type="text"
-            id="productProducer"
-            class="products_input"
-            placeholder="Tên tổ chức chịu trách nhiệm sản xuất"
-          />
-          <input
-            type="text"
-            id="productShippingFrom"
-            class="products_input"
-            placeholder="Gửi từ"
-          />
-
-          <input
-            type="text"
-            id="productName"
-            class="products_input"
-            placeholder="Tên sản phẩm"
-          />
-          <input
-            type="number"
-            id="productOriginalPrice"
-            class="products_input"
-            placeholder="Giá gốc (VND)"
-          />
-          <input
-            type="number"
-            id="productDiscountedPrice"
-            class="products_input"
-            placeholder="Giá khuyến mãi (VND)"
-          />
-          <input
-            type="number"
-            id="productDiscount"
-            class="products_input"
-            placeholder="Khuyến mãi (%)"
-          />
-          <input
-            type="date"
-            id="productReceiveFrom"
-            class="products_input"
-            placeholder="Nhận hàng từ"
-          />
-          <input
-            type="date"
-            id="productReceiveTo"
-            class="products_input"
-            placeholder="Nhận hàng đến"
-          />
-          <textarea
-            id="productDescription"
-            class="products_textarea"
-            placeholder="Mô tả sản phẩm (tối đa 500 ký tự)"
-          ></textarea>
-          <button onclick="addProduct()">Thêm</button>
-          <div id="products_list"></div>
+          <h2>Quản lý Sản phẩm</h2>
+          <form id="productForm">
+            <input
+              type="text"
+              id="productName"
+              class="products_input"
+              placeholder="Tên sản phẩm"
+              required
+            />
+            <input
+              type="number"
+              id="productPrice"
+              class="products_input"
+              placeholder="Giá (VND)"
+              required
+            />
+            <input
+              type="text"
+              id="productType"
+              class="products_input"
+              placeholder="Loại sản phẩm"
+              required
+            />
+            <input
+              type="number"
+              id="productQuantity"
+              class="products_input"
+              placeholder="Số lượng"
+              required
+            />
+            <textarea
+              id="productDescription"
+              class="products_textarea"
+              placeholder="Mô tả sản phẩm"
+              required
+            ></textarea>
+            <button type="submit">Thêm</button>
+          </form>
+          <div id="products_list" class="products_list"></div>
         </div>
         <div class="customer_container" id="customer">
           <h2 class="customer_heading">Quản lý khách hàng</h2>
