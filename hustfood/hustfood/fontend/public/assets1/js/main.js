@@ -48,7 +48,7 @@ function addProduct() {
                 <p>Loại: ${type}</p>
                 <p>Số lượng: ${quantity}</p>
                 <p>Mô tả: ${description}</p>
-                <button class="products_status products_pending" onclick="updateStatus(this)">Đang giao</button>
+                <button class="products_status products_pending" onclick="updateStatus(this)">Trạng thái</button>
                 <button onclick="deleteProduct(this)">Xóa</button>
             `;
   productList.appendChild(productItem);

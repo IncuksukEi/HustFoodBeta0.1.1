@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
-    <link rel="stylesheet" href="assets/css/product.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/profile.css" />
     <link
       rel="stylesheet"
       href="./assets/fonts/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css"
@@ -16,26 +21,26 @@
       <div class="grid">
         <nav class="header__navbar">
           <ul class="header__navbar-list">
-            <a
+            <li
               class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate"
-              href="index.html"
             >
-              <i class="fa-solid fa-house Home__button"></i>
-              Trở về trang chủ
+              Vào các kênh trong cửa hàng
 
-              <!-- <ul class="header__navbar-option">
+              <ul class="header__navbar-option">
                 <li
                   class="header__navbar-option-item header__navbar-option-item--active"
                 >
                   <span>Kênh người mua</span>
                   <i class="fa-solid fa-check"></i>
                 </li>
-                <li class="header__navbar-option-item">
-                  <span>Kênh người bán</span>
-                  <i class="fa-solid fa-check"></i>
-                </li>
-              </ul> -->
-            </a>
+                <a href="index1.html">
+                  <li class="header__navbar-option-item">
+                    <span>Kênh người bán</span>
+                    <i class="fa-solid fa-check"></i>
+                  </li>
+                </a>
+              </ul>
+            </li>
             <li class="header__navbar-item">
               <span class="header__navbar-title--nopointer">Kết nối</span>
               <a href="" class="header__nav-icon-link">
@@ -167,13 +172,13 @@
                 <span class="header__navbar-user-name">Người dùng</span>
                 <ul class="header__navbar-user-menu">
                   <li class="header__navbar-user-item">
-                    <a href="profile.html">Tài khoản của tôi</a>
+                    <a href="#">Tài khoản của tôi</a>
                   </li>
                   <!-- <li class="header__navbar-user-item">
                     <a href="">Địa chỉ của tôi</a>
                   </li> -->
                   <li class="header__navbar-user-item">
-                    <a href="">Đơn mua</a>
+                    <a href="cart.html">Đơn mua</a>
                   </li>
                   <li
                     class="header__navbar-user-item header__navbar-user-item--separate"
@@ -352,106 +357,83 @@
         </div>
       </div>
     </header>
-    <div class="product">
-      <div class="container">
-        <div class="product">
-          <div class="product-image">
-            <img
-              src="	https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf0y105wvi3bd0@resize_w900_nl.webp"
-              alt="Bánh Karo"
+    <div class="app__container">
+      <div class="profile_content">
+        <div class="profile_container">
+          <div class="profile_title">Hồ Sơ Của Tôi</div>
+          <div class="profile_subtitle">
+            Quản lý thông tin hồ sơ để bảo mật tài khoản
+          </div>
+          <!-- <input
+            type="text"
+            class="profile_input"
+            placeholder="Tên người dùng"
+            readonly
+          /> -->
+
+          <input
+            type="text"
+            class="profile_input"
+            placeholder="Nhập tên của bạn"
+          />
+          <input type="email" class="profile_input" placeholder="Email" />
+          <input
+            type="tell"
+            class="profile_input"
+            placeholder="Số điện thoại"
+            pattern="[0-9]*"
+            inputmode="numeric"
+          />
+
+          <div class="profile_gender_wrapper">
+            <label class="profile_label">Giới tính</label>
+            <div class="profile_gender">
+              <label
+                ><input type="radio" name="gender" class="profile_radio" />
+                Nam</label
+              >
+              <label
+                ><input type="radio" name="gender" class="profile_radio" />
+                Nữ</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="gender"
+                  class="profile_radio"
+                  checked
+                />
+                Khác</label
+              >
+            </div>
+          </div>
+
+          <label class="profile_label">Ngày sinh</label>
+          <div class="profile_dob">
+            <input
+              type="number"
+              id="profile_day"
+              placeholder="Ngày"
+              min="1"
+              max="31"
+            />
+            <input
+              type="number"
+              id="profile_month"
+              placeholder="Tháng"
+              min="1"
+              max="12"
+            />
+            <input
+              type="number"
+              id="profile_year"
+              placeholder="Năm"
+              min="1900"
+              max="2025"
             />
           </div>
-          <div class="product-info">
-            <h1 class="product-title">
-              [ĐỘC QUYỀN LIVESTREAM] Combo 4 bịch bánh Karo Richy trứng tươi chà
-              bông sợi gà và phô mai hoàng kim
-            </h1>
-            <div class="rating">
-              <span>
-                <div class="home-product-item__rating">
-                  <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                  <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                  <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                  <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                  <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                </div>
-              </span>
-              <span class="review-count">1,3k Đánh Giá</span>
-              <span class="sold-count">5,1k Đã Bán</span>
-            </div>
-            <div class="flash-sale">
-              <span class="sale-price">₫129.000</span>
-              <span class="old-price">₫250.000</span>
-              <span class="discount">-48%</span>
-            </div>
-            <div class="shipping">
-              Nhận hàng từ 13 Th03 - 15 Th03, phí giao 0đ
-            </div>
-            <div class="variant">
-              <button class="variant-btn active">4 bịch Chà bông</button>
-              <button class="variant-btn">4 bịch Phô mai Cam</button>
-              <button class="variant-btn">2 bịch Đỏ + 2 bịch Cam</button>
-            </div>
-            <button class="buy-btn">Mua Ngay</button>
-            <button class="add-to-cart">Thêm Vào Giỏ Hàng</button>
-            <button class="add-to-cart--active">Đã Thêm Vào Giỏ Hàng</button>
-          </div>
-        </div>
-        <div class="product-details">
-          <h2>Mô tả sản phẩm</h2>
-          <div class="product_description" id="productDescription">
-            <p>
-              Combo 4 bịch Bánh tươi Karo: 1 Karo chà bông sợi gà truyền thống +
-              1 Karo phô mai + 2 Karo Gấu nhân phô mai Sở hữu hương vị đặc biệt
-              hòa quyện hoàn hảo giữa trứng tươi và chà bông, bánh trứng chà
-              bông Karo đem đến vị đậm đà, ngon miệng cùng hương vị phô mai.
-              Thông tin sản phẩm: - Hạn sử dụng: 45 ngày từ ngày sản xuất. - Sử
-              dụng: Bóc bánh, ăn liền, tránh để lâu ngoài không khí, sẽ làm ảnh
-              hưởng tới chất lượng của bánh. Ưu điểm nổi bật: – Đúng như tên gọi
-              của mình, bánh trứng chà bông Karo sở hữu vẻ ngoài xốp phồng, mặt
-              bánh có những đường kẻ ngang dọc caro thật ấn tượng và lạ mắt. Màu
-              bánh vàng đậm nhờ có sự kết hợp của ruốc và trứng trông rất hấp
-              dẫn. – Bánh tươi Karo được làm từ nguồn nguyên liệu 100% trứng
-              tươi và sợi thịt gà. Với công nghệ tiên phong cho ra đời chiếc
-              bánh đậm đà – thơm hương trứng, đậm vị chà bông thật hấp dẫn. Bánh
-              mềm xốp, phồng mịn, ruốc đan xen đều khắp bánh. – Bánh tươi Karo
-              mang đến nhiều dinh dưỡng, được xem như bữa ăn nhẹ cung cấp năng
-              lượng và các chất cần thiết cho cơ thể như: protein, canxi, chất
-              xơ và các dưỡng chất khác… – Được đóng gói nhỏ gọn trong bao bì,
-              tiện lợi, bánh trứng chà bông Karo phù hợp để mang theo khi đi xa,
-              du lịch, đi chơi, dã ngoại… Bao bì giấy đẹp mắt, ấn tượng, thân
-              thiện với môi trường. – Bánh tươi Karo được sản xuất trên dây
-              chuyền sản xuất hiện đại, quy trình quản lý chất lượng tiêu chuẩn
-              quốc tế, cùng với nguồn nguyên liệu sạch – tươi, an toàn, đảm bảo
-              và an toàn cho sức khỏe người sử dụng. Hướng dẫn bảo quản: – Bảo
-              quản nơi khô ráo, thoáng mát, tránh ánh nắng mặt trời. – Ngày sản
-              xuất/ Hạn sử dụng: In trên bao bì sản phẩm: 45 ngày kể từ ngày sản
-              xuất – Bánh tươi Karo hiện đang được sản xuất và phân phối bởi
-              Richy. #banhkaro #banhkarotrungtuoichabong #banhkarosoiga
-              #banhkarochabong #banhkarotrungtuoichabongrichy #banhkarothung
-              #karo #karotrungtuoichabong #karophomai #karophomaihoangkim
-              #banhkarophomai #banhkarotrungtuoichabongphomai
-              #banhkarophomaihoangkim #banhrichy
-            </p>
-          </div>
-          <button class="toggle_button" onclick="toggleDescription()">
-            Xem thêm
-          </button>
-        </div>
-        <div class="product-details">
-          <h2>Bình luận</h2>
-          <div class="comment_section">
-            <div class="comment_input_container">
-              <input
-                type="text"
-                class="comment_input"
-                id="commentInput"
-                placeholder="Viết bình luận..."
-              />
-              <button class="comment_button" onclick="addComment()">Gửi</button>
-            </div>
-            <div class="comment_list" id="commentList"></div>
-          </div>
+
+          <button class="profile_button">Lưu</button>
         </div>
       </div>
     </div>
@@ -550,37 +532,33 @@
         </div>
       </div>
     </footer>
-    <!-- JS -->
     <script>
-      function toggleDescription() {
-        const desc = document.getElementById("productDescription");
-        const button = document.querySelector(".toggle_button");
-        if (desc.classList.contains("expanded")) {
-          desc.classList.remove("expanded");
-          button.textContent = "Xem thêm";
-        } else {
-          desc.classList.add("expanded");
-          button.textContent = "Thu gọn";
+      document.addEventListener("DOMContentLoaded", function () {
+        let dayInput = document.getElementById("profile_day");
+        let monthInput = document.getElementById("profile_month");
+        let yearInput = document.getElementById("profile_year");
+
+        function updateMaxDays() {
+          let day = parseInt(dayInput.value);
+          let month = parseInt(monthInput.value);
+          let year = parseInt(yearInput.value);
+
+          // Xác định số ngày tối đa của tháng
+          let maxDays = new Date(year || 2000, month, 0).getDate(); // Mặc định năm 2000 nếu chưa nhập
+
+          // Cập nhật max cho input ngày
+          dayInput.max = maxDays;
+
+          // Nếu ngày nhập vào lớn hơn max hợp lệ, điều chỉnh lại
+          if (day > maxDays) {
+            dayInput.value = maxDays;
+          }
         }
-      }
-    </script>
-    <script>
-      function addComment() {
-        const input = document.getElementById("commentInput");
-        if (input.value.trim() !== "") {
-          const commentList = document.getElementById("commentList");
-          const newComment = document.createElement("div");
-          newComment.classList.add("comment_item");
-          newComment.innerHTML = `
-                  <img src="assets1/img/Customer1.png" alt="User Avatar" class="user_avatar">
-                  <div>
-                      <strong>Người dùng:</strong> ${input.value}
-                  </div>
-              `;
-          commentList.prepend(newComment);
-          input.value = "";
-        }
-      }
+
+        // Gọi hàm khi thay đổi tháng hoặc năm
+        monthInput.addEventListener("input", updateMaxDays);
+        yearInput.addEventListener("input", updateMaxDays);
+      });
     </script>
   </body>
 </html>
