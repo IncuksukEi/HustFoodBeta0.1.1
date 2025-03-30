@@ -17,7 +17,7 @@ HustFood là một hệ thống quản lý bán hàng online dành cho quán ăn
 
 ## Cài đặt và chạy dự án
 ### Yêu cầu hệ thống
-- Java 17 hoặc cao hơn
+- Java 21 hoặc cao hơn
 - Node.js và npm (dành cho frontend)
 - MySQL
 
