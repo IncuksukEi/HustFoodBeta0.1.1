@@ -57,6 +57,6 @@ HustFood là một hệ thống quản lý bán hàng online dành cho quán ăn
 Nếu bạn muốn đóng góp, hãy tạo một **pull request** hoặc liên hệ với nhóm phát triển.
 
 ## Liên hệ
-- Email: [VuDucHoangAnh]Anh.VDH235658@sis.hust.edu.vn
+- Email: [VuDucHoangAnh](Anh.VDH235658@sis.hust.edu.vn)
 - Facebook: [IncuksukEi](https://www.facebook.com/vu.uc.hoanganh.586997)
 
